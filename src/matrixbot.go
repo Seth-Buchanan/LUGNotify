@@ -45,12 +45,12 @@ func main() {
 	notifyEvent(event, config)
 }
 
-func CurrentMeeting(schedule string) string { // needs to read table headings first
+func CurrentMeeting(schedule string) string {
 	
 	re := regexp.MustCompile(`\|.*\r?\n`)
 	headingsRaw := re.FindStringSubmatch(schedule)
 
-	// re = regexp.MustCompile(`\| 2023-11-22.*\r?\n`)
+	// re = regexp.MustCompile(`\| 2023-11-22.*\r?\n`) // test regex
 	date := string(time.Now().Format("2006-01-02"))
 	re = regexp.MustCompile(`\| ` + date + `.*\r?\n`)
 	matches := re.FindStringSubmatch(schedule)
