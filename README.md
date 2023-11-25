@@ -2,7 +2,7 @@
 Sends meeting information to a specifed Matrix room
 
 ## Usage
-Put script to call it in a Cron job or Systemd timer to run weekly on Wednesdays
+Put script to call it in a Cron job or Systemd timer to run weekly on Wednesdays.
 Included in matrixbot.nix is my Systemd timer and service config.
 
 ### Using the command
