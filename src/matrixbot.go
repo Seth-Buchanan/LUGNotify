@@ -91,7 +91,7 @@ func notifyEvent(event string, config map[string]interface{}) {
 	req.Header.Set("Content-Type", "application/json")
 
 	if err != nil {
-		log.Fatalf("\nAn Error Occured %v", err)
+		log.Fatalf("\nA Fatal Error Occured: %v", err)
 	}
 
 	resp, err := client.Do(req)
